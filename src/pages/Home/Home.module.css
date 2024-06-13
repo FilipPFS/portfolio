@@ -1,0 +1,92 @@
+:root {
+    --blue: rgb(162, 192, 252);
+  }
+  
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.yellow {
+    color: var(--blue);
+}
+
+.main {
+    padding: 0 90px;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.infoContainer {
+    width: 50%;
+}
+
+.infoContainer span {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.infoContainer h1 {
+    font-size: 60px;
+}
+
+.infoContainer p {
+    margin-top: 10px;
+    width: 70%;
+}
+
+.imgContainer {
+    width: 40%;
+}
+
+.imgContainer img {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    color: var(--blue);
+}
+
+.icon:hover {
+    color: rgb(255, 255, 255);
+}
+
+.valueContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.valueContainer h1 {
+    text-align: center;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.values h2 {
+    color: var(--blue);
+}
+
+.value {
+    width: 25%;
+}

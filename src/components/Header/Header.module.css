@@ -7,27 +7,45 @@
     padding: 0 60px;
 }
 
-.navigation {
+.navDesktop {
     display: flex;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 50px;
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-    gap: 30px;
+    gap: 60px;
 }
 
-.navigation a {
+.navDesktop a {
     font-size: 23px;
     padding: 10px 30px;
     font-weight: 600;
 }
 
-.navigation a:hover {
+.active {
+    background-color: rgb(171, 148, 192);
+    border-radius: 30px;
+}
+
+.notActive:hover {
     background-color: rgb(52, 52, 132);
     border-radius: 30px;
 }
 
 .logoContainer img {
     width: 150px;
+}
+
+.navMobile {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .navDesktop {
+        display: none;
+    }
+
+    .navMobile {
+        display: block;
+    }
 }
 

@@ -12,7 +12,7 @@ body {
 
 .App {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   background: linear-gradient(to bottom, #01010b, #010120);
   min-height: 100vh;
   color: white;
@@ -21,4 +21,8 @@ body {
 a {
   color: white;
   text-decoration: none;
+}
+
+footer {
+  margin-top: auto;
 }
