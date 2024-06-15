@@ -1,0 +1,30 @@
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 15px;
+}
+
+.container img {
+    border-radius: 20px;
+    box-shadow: rgba(108, 201, 238, 0.02) 0px 1px 3px 0px, rgba(234, 238, 243, 0.15) 0px 0px 0px 1px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background-color: transparent;
+    padding: 7px 13px;
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+}

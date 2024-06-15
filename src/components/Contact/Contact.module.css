@@ -1,0 +1,35 @@
+input, textarea {
+    padding: 10px;
+    font-family: Outfit;
+    font-size: 20px;
+    color: white;
+}
+
+.form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    margin: 120px 0px;
+}
+
+.form h1 {
+    align-self: center;
+}
+
+.form input, .form textarea {
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: rgba(148, 201, 219, 0.24) 0px 3px 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(17, 17, 115);
+}
+
+.button:active {
+    background-color: rgb(37, 37, 185);
+}

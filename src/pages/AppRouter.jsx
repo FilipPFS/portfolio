@@ -5,6 +5,8 @@ import Home from './Home/Home';
 import Footer from '../components/Footer/Footer';
 import Projects from './Projects/Projects';
 import About from './About/About';
+import SingleProject from './SingleProject/SingleProject';
+import Error from './Error/Error';
 
 const AppRouter = () => {
     return (
@@ -13,7 +15,9 @@ const AppRouter = () => {
             <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/projects' element={<Projects />}/> 
+                <Route path='/projects/:id' element={<SingleProject />}/>
                 <Route path='/about' element={<About />} />
+                <Route path='*' element={<Error />}/>
             </Routes>
             <Footer />
         </Router>

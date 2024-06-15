@@ -1,8 +1,12 @@
 import React from 'react'
 import photo from "../../images/photo.webp";
 import styles from "./Home.module.css";
-import { faTwitter, faLinkedin, faGithub, faGit } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+import { HomeProjects } from '../../components/HomeProjects/HomeProjects';
+import data from '../../data';
+import { ContactUs } from '../../components/Contact/Contact';
 
 const Home = () => {
   return (
@@ -26,7 +30,7 @@ const Home = () => {
           </section>
         </div>
         <div className={styles.imgContainer}>
-          <img src={photo} alt='Filip personnal photo' />
+          <img src={photo} alt='Filip portfolio' />
         </div>
       </div>
       <div className={styles.valueContainer}>
@@ -52,6 +56,25 @@ const Home = () => {
           </section>
         </div>
       </div>
+      <div className={styles.projects}>
+        <section className={styles.projectsHead}>
+          <h1>Projets récents</h1>
+          <Link to='/projects'><button>Voir tous</button></Link>
+        </section>
+        <section className={styles.projectsList}>
+          {data.map((item) => {
+            return (
+              <HomeProjects 
+              id = {item.id}
+              title = {item.title}
+              tech = {item.tech}
+              img = {item.img}
+              />
+            )
+          })}
+        </section>
+      </div>
+      <ContactUs />
     </main>
   )
 }

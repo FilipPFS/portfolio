@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 :root {
     --blue: rgb(162, 192, 252);
   }
@@ -13,7 +15,10 @@ h1, p {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     padding: 0 90px;
+    gap: 20px;
 }
 
 .mainContainer {
@@ -70,6 +75,8 @@ h1, p {
     gap: 20px;
     padding: 30px;
     border: 1px solid var(--blue);
+    /* box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
     border-radius: 20px;
     margin: 50px 0;
 }
@@ -89,4 +96,41 @@ h1, p {
 
 .value {
     width: 25%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projectsHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectsHead h1 {
+    font-size: 40px;
+}
+
+.projectsHead button {
+    padding: 10px 30px;
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 25px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid var(--blue);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.projectsHead button:hover{
+    background-color: rgb(12, 12, 82);
+}
+
+.projectsList {
+    display: flex;
+    justify-content: space-between;
 }
