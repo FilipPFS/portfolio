@@ -1,0 +1,62 @@
+.main {
+    padding: 120px 90px;
+}
+
+.main img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectInfo h1 {
+    font-size: 50px;
+}
+
+.projectInfo p {
+    width: 100%;
+}
+
+.projectInfo a {
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.projectInfo a:hover {
+    background-color: rgb(12, 12, 82);
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.items {
+    display: flex;
+    gap: 10px;
+}
+
+.item {
+    padding: 5px 10px;
+    background-color: rgb(92, 92, 211);
+    border-radius: 20px;
+}

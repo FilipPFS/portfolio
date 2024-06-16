@@ -1,0 +1,87 @@
+.main {
+    padding: 0 90px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.main p {
+    color: rgb(171, 193, 198);
+}
+
+.mainHead {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.mainHead h1 {
+    font-size: 100px;
+}
+
+.mainHead p {
+    align-self: center;
+    font-size: 30px;
+    width: 70%;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainSection {
+    display: flex;
+}
+
+.mainSection h2 {
+    /* border: 1px solid white; */
+    font-size: 35px;
+    width: 20%;
+}
+
+.mainSection p {
+    max-width: 80%;
+    font-size: 25px;
+}
+
+.mainSectionTwo {
+    align-items: center;
+}
+
+
+.mainSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.singleSkill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skillTitle {
+    font-size: 25px;
+    color: rgb(171, 193, 198);
+}
+
+.allSkills {
+    display: flex;
+    gap: 15px;
+}
+
+.skill {
+    font-size: 20px;
+    padding: 8px 18px;
+    background-color: rgb(92, 92, 211);
+    border-radius: 20px;
+}
+
+

@@ -25,6 +25,10 @@ input, textarea {
     box-shadow: rgba(148, 201, 219, 0.24) 0px 3px 8px;
 }
 
+.form textarea {
+    height: 200px;
+}
+
 .button:hover {
     cursor: pointer;
     background-color: rgb(17, 17, 115);

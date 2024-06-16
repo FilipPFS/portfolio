@@ -10,9 +10,9 @@ export const HomeProjects = ({ id, title, tech, img }) => {
             </Link>
             <h1>{title}</h1>
             <div className={styles.tags}>
-                {tech.map((tag) => {
+                {tech.map((tag, index) => {
                     return (
-                        <p className={styles.tag}>{tag}</p>
+                        <p key={index} className={styles.tag}>{tag}</p>
                     )
                 })}
             </div>

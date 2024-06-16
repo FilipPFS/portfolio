@@ -36,4 +36,5 @@ export default [
         img: p2,
         git: "https://github.com/FilipPFS/kasa_app.git"
     },
+    
 ]

@@ -9,6 +9,9 @@ import data from '../../data';
 import { ContactUs } from '../../components/Contact/Contact';
 
 const Home = () => {
+
+  const recentProjects = data.slice(-3);
+
   return (
     <main className={styles.main}>
       <div className={styles.mainContainer}>
@@ -62,9 +65,10 @@ const Home = () => {
           <Link to='/projects'><button>Voir tous</button></Link>
         </section>
         <section className={styles.projectsList}>
-          {data.map((item) => {
+          {recentProjects.map((item) => {
             return (
               <HomeProjects 
+              key={item.id}
               id = {item.id}
               title = {item.title}
               tech = {item.tech}
