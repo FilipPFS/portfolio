@@ -10,7 +10,7 @@ const About = () => {
         <p>Une description de mon parcours professionnel et de mes compétences.</p>
       </div>
       <div className={styles.mainContent}>
-        <section className={styles.mainSection}>
+        <section className={`${styles.mainSection} ${styles.mainSectionOne}`}>
           <h2>Parcours</h2>
           <p>J'ai débuté le développement par une formation OpenClassroom de développeur web qui m'a fait découvrir le développement avec plusieurs projets concrets. C'est aussi grâce à cette formation que j'ai pu développé beaucoup de comptétences et consolider celles que je possedais déjà. Maintenant, je souhaite encrichir mes comptétences en travaillant sur les nouvelles technologies comme TypeScript par exemple. De plus, je souhaite enrichir mon expérience professionnelle et décrocher un premier emploi dans le développement web. Cela me permettra de développer de nouvelles compétences tout en consolidant celles que je possède déjà.</p>
         </section>

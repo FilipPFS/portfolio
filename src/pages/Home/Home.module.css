@@ -135,3 +135,26 @@ h1, p {
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 1175px) {
+    .infoContainer h1 {
+        font-size: 50px;
+    }
+    
+    .infoContainer p {
+        margin-top: 10px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .infoContainer h1 {
+        font-size: 35px;
+    }
+    
+    .infoContainer p {
+        font-size: 15px;
+        width: 90%;
+    }
+}
+

@@ -39,6 +39,14 @@
     display: none;
 }
 
+@media (max-width: 1024px) {
+    .navDesktop {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+}
+
+
 @media (max-width: 800px) {
     .navDesktop {
         display: none;

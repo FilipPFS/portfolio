@@ -29,3 +29,9 @@ h1, p {
     border: 2px solid var(--blue);
     border-radius: 20px;
 }
+
+@media (max-width: 1175px) {
+    .tags {
+        flex-wrap: wrap;
+    }
+}

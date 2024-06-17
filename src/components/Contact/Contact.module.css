@@ -10,7 +10,7 @@ input, textarea {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 40%;
+    width: 600px;
     margin: 120px 0px;
 }
 

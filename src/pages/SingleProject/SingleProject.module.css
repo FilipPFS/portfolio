@@ -60,3 +60,59 @@
     background-color: rgb(92, 92, 211);
     border-radius: 20px;
 }
+
+@media (max-width: 1175px) {
+    .main img {
+        width: 50%;
+        height: 300px;
+    }
+
+    .projectInfo a {
+        width: 35%;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        padding: 60px 90px;
+    }
+
+    .main img {
+        width: 100%;
+    }
+
+    .projectInfo {
+        gap: 30px;
+    }
+
+    .projectInfo a {
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .projectInfo h1 {
+        font-size: 70px;
+    }
+    
+    .projectInfo p {
+        font-size: 20px;
+    }
+
+    .tech {
+        font-size: 20px;
+    }
+    
+    .items {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .item {
+        padding: 8px 14px;
+        background-color: rgb(92, 92, 211);
+        border-radius: 20px;
+    }
+
+}

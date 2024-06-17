@@ -65,10 +65,23 @@ h2 {
     padding: 5px 15px;
     cursor: pointer;
     border-radius: 20px;
+    text-align: center;
 }
 
 .buttonGit:hover {
     background-color: rgb(12, 12, 82);
+}
+
+@media (max-width: 1024px) {
+    .projects {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .singleProject {
+        width: 100%;
+    }
 }
 
 
