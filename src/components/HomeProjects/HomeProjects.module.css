@@ -35,3 +35,11 @@ h1, p {
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 800px) {
+    .container {
+        max-width: 100%;
+        gap: 10px;
+    }
+}
+

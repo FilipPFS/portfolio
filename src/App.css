@@ -13,7 +13,7 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #01010b, #010120);
+  background-color: #01010b;
   min-height: 100vh;
   color: white;
 }

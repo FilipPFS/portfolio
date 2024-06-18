@@ -105,14 +105,58 @@
     }
     
     .items {
-        display: flex;
-        gap: 10px;
-    }
-    
-    .item {
-        padding: 8px 14px;
-        background-color: rgb(92, 92, 211);
-        border-radius: 20px;
+        flex-wrap: wrap;
     }
 
+}
+
+@media (max-width: 800px) {
+
+    .main {
+        gap: 25px;
+    }
+
+    .main img {
+        height: auto;
+    }
+
+    .projectInfo {
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projectInfo h1 {
+        align-self: center;
+        font-size: 40px;
+    }
+
+    .projectInfo p {
+        font-size: 17px;
+    }
+
+    .tech {
+        font-size: 17px;
+    }
+    
+    .items {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .projectInfo a {
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .main {
+        padding: 0 50px;
+    }
+
+    .projectInfo a {
+        width: 60%;
+    }
 }

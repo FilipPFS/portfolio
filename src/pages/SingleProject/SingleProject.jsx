@@ -21,7 +21,7 @@ const SingleProject = () => {
                         {singleItem.tech.map((item, index) => <span key={index} className={styles.item}>{item}</span>)}
                     </section>
                 </div>
-                <a href={singleItem.git}>GitHub Link</a>
+                <a href={singleItem.git} target="_blank" rel="noopener noreferrer">GitHub Link</a>
             </div>
         </main>
     )

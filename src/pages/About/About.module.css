@@ -127,8 +127,59 @@
     .skillTitle {
         font-size: 20px;
     }
+}
 
-    
+@media (max-width: 800px) {
+
+    .mainHead h1 {
+        font-size: 70px;
+    }
+
+    .mainHead p {
+        font-size: 17px;
+        width: 90%;
+    }
+
+    .mainContent {
+        gap: 50px;
+    }
+
+    .mainSection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mainSection h2 {
+        width: 100%;
+    }
+
+    .mainSection p {
+        max-width: 100%;
+    }
+
+    .mainSectionOne p {
+        margin-left: 0px;
+    }
+
+    .mainSectionTwo {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        padding: 0 50px;
+    }
+
+    .mainHead h1 {
+        font-size: 55px;
+    }
+
+    .mainHead p {
+        font-size: 17px;
+        width: 100%;
+    }
+
 }
 
 

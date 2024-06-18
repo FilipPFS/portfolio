@@ -37,3 +37,15 @@ input, textarea {
 .button:active {
     background-color: rgb(37, 37, 185);
 }
+
+@media (max-width: 800px) {
+    .form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .form {
+        width: 100%;
+    }
+}

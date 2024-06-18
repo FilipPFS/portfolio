@@ -15,14 +15,14 @@ const Projects = () => {
         {data.map((project) => {
           return (
             <div key={project.id} className={styles.singleProject}>
-              <Link to={`/projects/${project.id}`}>
+              <Link className={styles.imgLink} to={`/projects/${project.id}`}>
                 <img src={project.img} alt={project.title} />
               </Link>
               <div className={styles.infos}>
                 <Link to={`/projects/${project.id}`}>
                   <h2>{project.title}</h2>
                 </Link>
-                <a href={project.git} className={styles.buttonGit}>GitHub Link</a>
+                <a href={project.git} target="_blank" rel="noopener noreferrer" className={styles.buttonGit}>GitHub Link</a>
               </div>
             </div>
           )
