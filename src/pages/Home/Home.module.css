@@ -37,8 +37,12 @@ h1, p {
     margin-bottom: 5px;
 }
 
-.infoContainer h1 {
+.infoTitle {
     font-size: 60px;
+}
+
+.infoJs {
+    font-size: 50px;
 }
 
 .infoContainer p {
@@ -137,8 +141,12 @@ h1, p {
 }
 
 @media (max-width: 1175px) {
-    .infoContainer h1 {
+    .infoTitle {
         font-size: 50px;
+    }
+
+    .infoJs {
+        font-size: 40px;
     }
     
     .infoContainer p {
@@ -148,8 +156,12 @@ h1, p {
 }
 
 @media (max-width: 1024px) {
-    .infoContainer h1 {
+    .infoTitle {
         font-size: 35px;
+    }
+
+    .infoJs {
+        font-size: 28px;
     }
     
     .infoContainer p {
@@ -177,8 +189,12 @@ h1, p {
         font-size: 18px;
     }
 
-    .infoContainer h1 {
+    .infoTitle {
         font-size: 50px;
+    }
+
+    .infoJs {
+        font-size: 40px;
     }
 
     .imgContainer {
@@ -218,8 +234,12 @@ h1, p {
         padding: 0 50px;
     }
 
-    .infoContainer h1 {
+    .infoTitle {
         font-size: 35px;
+    }
+
+    .infoJs {
+        font-size: 28px;
     }
     
     .infoContainer p {

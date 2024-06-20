@@ -13,7 +13,9 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
-                <img src={logoFp} alt='logo' />
+                <Link to="/">
+                    <img src={logoFp} alt='logo' />
+                </Link>
             </div>
             <nav className={styles.navDesktop}>
                 <Link to="/" className={location.pathname === "/" ? styles.active : styles.notActive}>Home</Link>

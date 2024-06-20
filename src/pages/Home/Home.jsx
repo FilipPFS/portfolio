@@ -17,9 +17,10 @@ const Home = () => {
       <div className={styles.mainContainer}>
         <div className={styles.infoContainer}>
           <span>Salut,</span>
-          <h1>Je suis Filip</h1>
-          <h1 className={styles.yellow}>Développeur Web</h1>
-          <p>Développeur junior passionné avec une solide formation en programmation, j'ai un énorme potentiel pour apprendre rapidement et innover. Je suis déterminé à contribuer efficacement et à devenir un atout précieux pour toute équipe de développement.</p>
+          <h1 className={styles.infoTitle}>Je suis Filip</h1>
+          <h1 className={`${styles.yellow} ${styles.infoTitle}`}>Développeur Web</h1>
+          <h1 className={`${styles.yellow} ${styles.infoJs}`}>Java Script</h1>
+          <p>Développeur junior JavaScript passionné avec une solide formation en programmation, j'ai un énorme potentiel pour apprendre rapidement et innover. Je suis déterminé à contribuer efficacement et à devenir un atout précieux pour toute équipe de développement.</p>
           <section className={styles.icons}>
             <a href='https://github.com/FilipPFS' target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} className={styles.icon} />
