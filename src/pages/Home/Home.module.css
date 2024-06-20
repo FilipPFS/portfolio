@@ -38,11 +38,11 @@ h1, p {
 }
 
 .infoTitle {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .infoJs {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .infoContainer p {
@@ -142,11 +142,11 @@ h1, p {
 
 @media (max-width: 1175px) {
     .infoTitle {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .infoJs {
-        font-size: 40px;
+        font-size: 35px;
     }
     
     .infoContainer p {

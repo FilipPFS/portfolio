@@ -58,6 +58,10 @@ h2 {
     margin-top: 20px;
 }
 
+.infos h2 {
+    font-size: 22px;
+}
+
 .buttonGit {
     font-size: 16px;
     background-color: transparent;
