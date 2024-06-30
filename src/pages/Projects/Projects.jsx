@@ -13,6 +13,8 @@ const Projects = () => {
 
       <section className={styles.projects}>
         {data.map((project) => {
+
+
           return (
             <div key={project.id} className={styles.singleProject}>
               <Link className={styles.imgLink} to={`/projects/${project.id}`}>
@@ -20,7 +22,7 @@ const Projects = () => {
               </Link>
               <div className={styles.infos}>
                 <Link to={`/projects/${project.id}`}>
-                  <h2>{project.title}</h2>
+                <h2>{project.title.toUpperCase()}</h2>
                 </Link>
                 <a href={project.git} target="_blank" rel="noopener noreferrer" className={styles.buttonGit}>GitHub Link</a>
               </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import photo from "../../images/photo.webp";
+import image from "../../images/image.webp";
 import styles from "./Home.module.css";
 import { faTwitter, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

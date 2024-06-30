@@ -30,7 +30,13 @@ h1, p {
 
 .infoContainer {
     width: 50%;
+    animation: slideIn 1s ease-out;
 }
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
 
 .infoContainer span {
     font-size: 24px;
@@ -51,7 +57,7 @@ h1, p {
 }
 
 .imgContainer {
-    width: 40%;
+    width: 36%;
 }
 
 .imgContainer img {
