@@ -39,16 +39,16 @@ h1, p {
   }
 
 .infoContainer span {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .infoTitle {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .infoJs {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .infoContainer p {
@@ -71,7 +71,7 @@ h1, p {
 }
 
 .icon {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--blue);
 }
 
@@ -105,7 +105,15 @@ h1, p {
 }
 
 .value {
+    background-color: rgb(16, 16, 34);
     width: 25%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.valueTitle {
+    margin-bottom: 10px;
 }
 
 .projects {
@@ -122,14 +130,14 @@ h1, p {
 }
 
 .projectsHead h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .projectsHead button {
     padding: 10px 30px;
     font-family: Outfit;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
     background-color: transparent;
     color: white;
     border: 3px solid var(--blue);
