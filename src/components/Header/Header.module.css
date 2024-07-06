@@ -22,6 +22,10 @@
     font-weight: 600;
 }
 
+.lightNavDesktop a {
+    color: black;
+}
+
 .active {
     position: relative;
 }

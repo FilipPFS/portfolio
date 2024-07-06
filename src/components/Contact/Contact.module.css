@@ -2,7 +2,16 @@ input, textarea {
     padding: 10px;
     font-family: Outfit;
     font-size: 20px;
+}
+
+.darkInput {
     color: white;
+    border: 2px solid var(--blue);
+}
+
+.lightInput {
+    color: black; 
+    border: 2px solid black;
 }
 
 .container {
@@ -26,7 +35,6 @@ input, textarea {
 
 .form input, .form textarea {
     background-color: transparent;
-    border: 2px solid var(--blue);
     border-radius: 10px;
     box-shadow: rgba(148, 201, 219, 0.24) 0px 3px 8px;
 }
@@ -35,13 +43,34 @@ input, textarea {
     height: 200px;
 }
 
-.button:hover {
+.button {
     cursor: pointer;
-    background-color: rgb(17, 17, 115);
 }
 
-.button:active {
-    background-color: rgb(37, 37, 185);
+.lightButton {
+    color: black;
+    border: 2px solid black;
+}
+
+.darkButton {
+    color: white;
+    border: 2px solid var(--blue);
+}
+
+.darkButton:hover {
+    background-color: rgb(15, 15, 56);
+}
+
+.darkButton:active {
+    background-color: rgb(5, 5, 56);
+}
+
+.lightButton:hover {
+    background-color: rgb(230, 234, 237);
+}
+
+.lightButton:active {
+    background-color: rgb(213, 220, 227);
 }
 
 .container p {

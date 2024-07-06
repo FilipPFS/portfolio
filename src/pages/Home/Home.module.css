@@ -2,6 +2,7 @@
 
 :root {
     --blue: rgb(162, 192, 252);
+    --darkBlue: rgb(38, 38, 171);
   }
   
 
@@ -10,8 +11,12 @@ h1, p {
     padding: 0;
 }
 
-.yellow {
+.dark {
     color: var(--blue);
+}
+
+.light {
+    color: var(--darkBlue);
 }
 
 .main {
@@ -72,48 +77,22 @@ h1, p {
 
 .icon {
     font-size: 20px;
+}
+
+.darkIcon {
     color: var(--blue);
 }
 
-.icon:hover {
+.lightIcon {
+    color: var(--darkBlue);
+}
+
+.darkIcon:hover {
     color: rgb(255, 255, 255);
 }
 
-.valueContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-    border: 1px solid var(--blue);
-    /* box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px; */
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    margin: 50px 0;
-}
-
-.valueContainer h1 {
-    text-align: center;
-}
-
-.values {
-    display: flex;
-    justify-content: space-between;
-}
-
-.values h2 {
+.lightIcon:hover {
     color: var(--blue);
-}
-
-.value {
-    background-color: rgb(16, 16, 34);
-    width: 25%;
-    padding: 30px;
-    text-align: center;
-    border-radius: 15px;
-}
-
-.valueTitle {
-    margin-bottom: 10px;
 }
 
 .projects {
@@ -138,15 +117,28 @@ h1, p {
     font-family: Outfit;
     font-weight: 700;
     font-size: 20px;
-    background-color: transparent;
-    color: white;
-    border: 3px solid var(--blue);
     border-radius: 50px;
     cursor: pointer;
 }
 
-.projectsHead button:hover{
+.darkButton {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+    color: white;
+}
+
+.lightButton {
+    border: 3px solid var(--darkBlue);
+    background-color: transparent;
+    color: var(--darkBlue);
+}
+
+.darkButton:hover{
     background-color: rgb(12, 12, 82);
+}
+
+.lightButton:hover{
+    background-color: rgb(215, 224, 227);
 }
 
 .projectsList {
@@ -215,15 +207,6 @@ h1, p {
         width: 90%;
     }
 
-    .values {
-        flex-direction: column;
-        gap: 35px;
-    }
-
-    .value {
-        width: 100%;
-    }
-
     .projectsHead {
         flex-direction: column;
         gap: 20px;
@@ -262,22 +245,6 @@ h1, p {
 
     .projectsHead h1 {
         font-size: 35px;
-    }
-
-    .value h2 {
-        font-size: 22px;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .value p {
-        font-size: 15px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .valueContainer h1 {
-        font-size: 28px;
     }
 }
 

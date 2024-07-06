@@ -18,6 +18,14 @@ body {
   color: white;
 }
 
+.lightApp {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 100vh;
+  color: black;
+}
+
 a {
   color: white;
   text-decoration: none;

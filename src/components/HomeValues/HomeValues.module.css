@@ -1,0 +1,76 @@
+.valueContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid var(--blue);
+    /* box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.valueContainer h1 {
+    text-align: center;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.darkValue h2 {
+    color: var(--blue);
+}
+
+.ligthValue h2 {
+    color: var(--darkBlue);
+}
+
+.value {
+    width: 25%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.darkValue {
+    background-color: rgb(16, 16, 34);
+}
+
+.ligthValue {
+    background-color: rgb(244, 241, 241);
+}
+
+.valueTitle {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .values {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .value {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .value h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .value p {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .valueContainer h1 {
+        font-size: 28px;
+    }
+}

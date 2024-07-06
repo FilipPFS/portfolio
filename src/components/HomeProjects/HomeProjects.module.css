@@ -18,6 +18,10 @@ h1, p {
     object-fit: cover;
 }
 
+.lightImg {
+    border: 2px solid var(--darkBlue);
+}
+
 .tags {
     display: flex;
     gap: 10px;
@@ -26,8 +30,15 @@ h1, p {
 .tag {
     background-color: transparent;
     padding: 7px 13px;
-    border: 2px solid var(--blue);
     border-radius: 20px;
+}
+
+.lightTag {
+    border: 2px solid var(--darkBlue);
+}
+
+.darkTag {
+    border: 2px solid var(--blue);
 }
 
 @media (max-width: 1175px) {
