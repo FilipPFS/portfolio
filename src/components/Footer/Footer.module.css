@@ -11,14 +11,14 @@
 }
 
 .lightFooter {
-    border-top: 1px solid black;
+    background-color: rgb(241, 245, 248);
 }
 
 .darkFooter {
     border-top: 1px solid var(--blue);
 }
 
-.footer:before {
+.darkFooter:before {
     content: '';
     position: absolute;
     top: 0;
@@ -26,10 +26,6 @@
     right: 0;
     height: 10px;
     z-index: 1;
-}
-
-.lightFooter:before {
-    background: linear-gradient(to bottom, rgba(5, 16, 27, 0.3), rgba(255, 255, 255, 0));
 }
 
 .darkFooter:before {
@@ -45,6 +41,7 @@
     font-size: 15px;
     margin: 20px;
     position: relative;
+    font-weight: 600;
 }
 
 .lightLink {
@@ -88,6 +85,7 @@
 
 .info {
     font-size: 15px;
+    font-weight: 600;
 }
 
 .lightInfo {

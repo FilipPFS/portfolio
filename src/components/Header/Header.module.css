@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -77,6 +78,14 @@
     display: none;
 }
 
+.switchDesk {
+    display: block;
+}
+
+.switchMob {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .navDesktop {
         padding: 10px 20px;
@@ -103,12 +112,23 @@
     }
 
     .barsIcon {
-        color: white;
         font-size: 32px;
         cursor: pointer;
     }
 
-    .barsIcon:hover {
+    .lightBarsIcon {
+        color: black;
+    }
+
+    .lightBarsIcon:hover {
+        color: gray;
+    }
+
+    .darkBarsIcon {
+        color: white;
+    }
+
+    .darkBarsIcon:hover {
         color: rgb(220, 199, 199);
     }
 
@@ -117,13 +137,22 @@
         position: absolute;
         top: 120px;
         z-index: 999;
-        background-color: #0a0a1d;
         width: 100%;
         left: 0;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+    }
+
+    .navDarkMob {
+        background-color: #0a0a1d;
         box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.3),
               0 2px 4px -1px rgba(255, 255, 255, 0.3);
+    }
+
+    .navLightMob {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(56, 30, 94, 0.3),
+              0 2px 4px -1px rgba(31, 22, 112, 0.3);
     }
 
     .mobLinks {
@@ -138,8 +167,24 @@
         font-weight: 500;
     }
 
-    .mobLinks a:hover {
+    .lightLink {
+        color: black;
+    }
+
+    .lightLink:hover {
+        color: gray;
+    }
+
+    .darkLink:hover {
         color: rgb(214, 214, 235);
+    }
+
+    .switchDesk {
+        display: none;
+    }
+    
+    .switchMob {
+        display: block;
     }
 }
 

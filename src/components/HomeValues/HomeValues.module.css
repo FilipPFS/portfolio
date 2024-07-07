@@ -46,7 +46,7 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .values {
         flex-direction: column;
         gap: 35px;
@@ -55,6 +55,15 @@
     .value {
         width: 100%;
     }
+}
+
+
+@media (max-width: 800px) {
+
+    .value h2 {
+        font-size: 26px;
+    }
+
 }
 
 @media (max-width: 500px) {

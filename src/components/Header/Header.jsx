@@ -3,10 +3,11 @@ import logoFp from "../../images/logo.webp";
 import darkLogo from "../../images/darkLogo.png";
 import styles from "./Header.module.css";
 import { Link, useLocation } from "react-router-dom";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMode } from "../../feautures/themeSlice";
+import Switch from "../Switch/Switch";
 
 const Header = () => {
   const lightMode = useSelector((state) => state.theme.isLightMode);
@@ -27,9 +28,8 @@ const Header = () => {
         </Link>
       </div>
       <nav
-        className={`${styles.navDesktop} ${
-          lightMode ? styles.lightNavDesktop : ""
-        }`}
+        className={`${styles.navDesktop} ${lightMode ? styles.lightNavDesktop : ""
+          }`}
       >
         <Link
           to="/"
@@ -56,28 +56,34 @@ const Header = () => {
           A Propos
         </Link>
       </nav>
-      <button onClick={handleTheme}>Dark</button>
+      <div className={styles.switchDesk}>
+        <Switch />
+      </div>
       <button
         className={styles.navBars}
         onClick={() => setOpen((prevOpen) => !prevOpen)}
       >
-        <FontAwesomeIcon icon={faBars} className={styles.barsIcon} />
+        <FontAwesomeIcon icon={faBars} className={`${styles.barsIcon} ${lightMode ? styles.lightBarsIcon : styles.darkBarsIcon}`} />
       </button>
-      <nav className={styles.navMobile}>
+
+      <nav className={`${styles.navMobile} ${lightMode ? styles.navLightMob : styles.navDarkMob}`}>
         {open && (
           <div className={styles.mobLinks}>
-            <Link to="/" onClick={() => setOpen((prevOpen) => !prevOpen)}>
+            <Link className={lightMode ? styles.lightLink : styles.darkLink} to="/" onClick={() => setOpen((prevOpen) => !prevOpen)}>
               Home
             </Link>
-            <Link
+            <Link className={lightMode ? styles.lightLink : styles.darkLink}
               to="/projects"
               onClick={() => setOpen((prevOpen) => !prevOpen)}
             >
               Projets
             </Link>
-            <Link to="/about" onClick={() => setOpen((prevOpen) => !prevOpen)}>
+            <Link className={lightMode ? styles.lightLink : styles.darkLink} to="/about" onClick={() => setOpen((prevOpen) => !prevOpen)}>
               A Propos
             </Link>
+            <div className={styles.switchMob}>
+              <Switch />
+            </div>
           </div>
         )}
       </nav>

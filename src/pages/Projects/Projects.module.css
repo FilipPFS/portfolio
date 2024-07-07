@@ -33,16 +33,35 @@ h2 {
     width: 30%;
     padding: 20px;
     background-color: transparent;
-    border: 2px solid aqua;
     border-radius: 10px;
+}
+
+.lightSingleProject {
+    border: 2px solid rgb(20, 14, 71);
+}
+
+.darkSingleProject {
+    border: 2px solid aqua;
 }
 
 .singleProject img {
     width: 100%;
     object-fit: cover;
-    border: 1px solid var(--blue);
     border-radius: 15px;
 }
+
+.lightImage {
+    border: 2px solid rgb(20, 14, 71);
+}
+
+.darkImage {
+    border: 2px solid var(--blue);
+}
+
+.lightTitle {
+    color: black;
+}
+
 
 .infos {
     display: flex;
@@ -58,14 +77,27 @@ h2 {
 .buttonGit {
     font-size: 11px;
     background-color: transparent;
-    border: 2px solid var(--blue);
+    font-weight: 600;
     padding: 5px 15px;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
 }
 
-.buttonGit:hover {
+.lightButtonGit {
+    color: var(--darkBlue);
+    border: 2px solid var(--darkBlue);
+}
+
+.lightButtonGit:hover {
+    background-color: rgb(228, 234, 239);
+}
+
+.darkButtonGit {
+    border: 2px solid var(--blue);
+}
+
+.darkButtonGit:hover {
     background-color: rgb(12, 12, 82);
 }
 

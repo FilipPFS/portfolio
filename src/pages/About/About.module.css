@@ -7,8 +7,12 @@
     gap: 60px;
 }
 
-.main p {
+.darkText {
     color: rgb(171, 193, 198);
+}
+
+.lightText {
+    color: rgb(51, 10, 87);
 }
 
 .mainHead {
@@ -68,7 +72,6 @@
 
 .skillTitle {
     font-size: 22px;
-    color: rgb(171, 193, 198);
 }
 
 .allSkills {
@@ -80,8 +83,16 @@
 .skill {
     font-size: 20px;
     padding: 8px 18px;
-    background-color: rgb(92, 92, 211);
     border-radius: 20px;
+    color: white;
+}
+
+.darkSkill {
+    background-color: rgb(92, 92, 211);
+}
+
+.lightSkill {
+    background-color: rgb(8, 8, 64);
 }
 
 @media (max-width: 1175px) {
