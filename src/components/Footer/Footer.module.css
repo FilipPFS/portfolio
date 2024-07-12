@@ -1,86 +1,27 @@
 :root {
     --blue: rgb(162, 192, 252);
-  }
+}
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 30px 80px;
+    gap: 10px;
+    padding: 30px 0;
     position: relative;
 }
 
 .lightFooter {
-    background-color: rgb(241, 245, 248);
+    background-color: rgb(35, 35, 65);
 }
 
 .darkFooter {
-    border-top: 1px solid var(--blue);
+    background-color: rgb(16, 16, 37);
 }
 
-.darkFooter:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    z-index: 1;
-}
-
-.darkFooter:before {
-    background: linear-gradient(to bottom, rgba(27, 116, 195, 0.3), rgba(255, 255, 255, 0));
-}
-
-.links {
+.icons {
     display: flex;
-    gap: 20px;
-}
-
-.links a {
-    font-size: 15px;
-    margin: 20px;
-    position: relative;
-    font-weight: 600;
-}
-
-.lightLink {
-    color: black;
-}
-
-.darkLink {
-    color: rgb(186, 186, 234);
-}
-
-.darkLink:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    background-color: var(--blue);
-}
-
-.lightLink:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    background-color: black;
-}
-
-.links a:hover:after {
-    visibility: visible;
-    transform: scaleX(1);
+    gap: 10px;
 }
 
 .info {
@@ -88,32 +29,31 @@
     font-weight: 600;
 }
 
+.lightIcon,
 .lightInfo {
-    color: black;
+    color: aqua;
+}
+
+.lightIcon:hover {
+    color: white;
 }
 
 .darkInfo {
-    color: var(--blue);
+    color: white;
+}
+
+.darkIcon:hover {
+    color: aqua;
 }
 
 @media (max-width: 800px) {
     .footer {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
         justify-content: flex-start;
     }
 
     .info {
         text-align: center;
-    }
-
-    .links {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .links a {
-        margin: 0;
     }
 }

@@ -41,6 +41,7 @@ const Home = () => {
               href="https://github.com/FilipPFS"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Github"
             >
               <FontAwesomeIcon icon={faGithub} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
             </a>
@@ -48,6 +49,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/filip-petrovic-business/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Linkedin"
             >
               <FontAwesomeIcon icon={faLinkedin} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
             </a>
@@ -55,6 +57,7 @@ const Home = () => {
               href="https://x.com/fp__business"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter"
             >
               <FontAwesomeIcon icon={faTwitter} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
             </a>

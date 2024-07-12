@@ -31,74 +31,78 @@ h2 {
 
 .singleProject {
     width: 30%;
-    padding: 20px;
-    background-color: transparent;
+    /* padding: 20px; */
     border-radius: 10px;
+    position: relative;
 }
 
 .lightSingleProject {
-    border: 2px solid rgb(20, 14, 71);
+    background-color: rgb(243, 238, 238);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .darkSingleProject {
-    border: 2px solid aqua;
+    background-color: rgb(24, 24, 46);
+}
+
+.tag {
+    position: absolute;
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    left: 15px;
+    top: 15px;
+}
+
+.lightTag {
+    background-color: rgb(40, 33, 33);
+    color: white;
+}
+
+.darkTag {
+    background-color: rgb(16, 16, 50);
+    color: white;
 }
 
 .singleProject img {
+    z-index: 1;
     width: 100%;
     object-fit: cover;
-    border-radius: 15px;
-}
-
-.lightImage {
-    border: 2px solid rgb(20, 14, 71);
-}
-
-.darkImage {
-    border: 2px solid var(--blue);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .lightTitle {
     color: black;
 }
 
+.descBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lightLink {
+    color: black;
+    text-decoration: underline;
+}
+
+.darkLink {
+    text-decoration: underline;
+}
 
 .infos {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 20px;
+    padding: 10px 20px;
 }
 
 .infos h2 {
-    font-size: 15px;
-}
-
-.buttonGit {
-    font-size: 11px;
-    background-color: transparent;
-    font-weight: 600;
-    padding: 5px 15px;
-    cursor: pointer;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.lightButtonGit {
-    color: var(--darkBlue);
-    border: 2px solid var(--darkBlue);
-}
-
-.lightButtonGit:hover {
-    background-color: rgb(228, 234, 239);
-}
-
-.darkButtonGit {
-    border: 2px solid var(--blue);
-}
-
-.darkButtonGit:hover {
-    background-color: rgb(12, 12, 82);
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -121,10 +125,6 @@ h2 {
         margin-top: 10px;
         font-size: 32px;
     }
-
-    .buttonGit {
-        margin-top: 10px;
-    }
 }
 
 @media (max-width: 800px) {
@@ -146,16 +146,4 @@ h2 {
         margin-top: 10px;
         font-size: 26px;
     }
-
-    .buttonGit {
-        font-size: 15px;
-        background-color: transparent;
-        border: 2px solid var(--blue);
-        padding: 5px 12px;
-        cursor: pointer;
-        border-radius: 20px;
-        text-align: center;
-    }
 }
-
-

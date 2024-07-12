@@ -35,15 +35,37 @@ export const ContactUs = () => {
     <div className={styles.container}>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <h1>Contactez-moi</h1>
-        <label>Votre nom</label>
-        <input type="text" name="user_username" required className={lightMode ? styles.lightInput : styles.darkInput} />
-        <label>Email</label>
-        <input type="email" name="user_email" required className={lightMode ? styles.lightInput : styles.darkInput} />
-        <label>Votre message</label>
-        <textarea name="message" required className={lightMode ? styles.lightInput : styles.darkInput} />
-        <input type="submit" value="Envoyer" className={`${styles.button} ${lightMode ? styles.lightButton : styles.darkButton}`} />
+        <label htmlFor="user_username">Votre nom</label>
+        <input
+          type="text"
+          id="user_username"
+          name="user_username"
+          required
+          className={lightMode ? styles.lightInput : styles.darkInput}
+        />
+        <label htmlFor="user_email">Email</label>
+        <input
+          type="email"
+          id="user_email"
+          name="user_email"
+          required
+          className={lightMode ? styles.lightInput : styles.darkInput}
+        />
+        <label htmlFor="message">Votre message</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          className={lightMode ? styles.lightInput : styles.darkInput}
+        />
+        <input
+          type="submit"
+          value="Envoyer"
+          className={`${styles.button} ${lightMode ? styles.lightButton : styles.darkButton}`}
+        />
       </form>
       {message && <p>{message}</p>}
     </div>
+
   );
 };
