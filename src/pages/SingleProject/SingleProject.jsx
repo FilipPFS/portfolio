@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import data from "../../data";
 import styles from "./SingleProject.module.css";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const SingleProject = () => {
   useEffect(() => {
@@ -10,18 +13,60 @@ const SingleProject = () => {
   }, []);
 
   const lightMode = useSelector((state) => state.theme.isLightMode);
+  const [selected, setSelected] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const params = useParams();
   const projectId = parseInt(params.id);
   const singleItem = data.find((item) => item.id === projectId);
   console.log(singleItem);
 
+  const handleImg = (index) => {
+    document.body.style.overflow = 'hidden';
+    setSelected(prevSelected => !prevSelected);
+    setIndex(index);
+  }
+
+  const addIndex = () => {
+    if (index < singleItem.img.length - 1) {
+      setIndex(prevIndex => prevIndex + 1);
+    } else {
+      setIndex(0)
+    }
+  };
+
+  const removeIndex = () => {
+    if (index > 0) {
+      setIndex(prevIndex => prevIndex - 1);
+    } else {
+      setIndex(singleItem.img.length - 1);
+    }
+  };
+
+  const setOverlay = () => {
+    document.body.style.overflow = '';
+    setSelected(false);
+  }
+
+
   return (
     <main className={styles.main}>
-      <div className={styles.mainImg}>
-        <img src={singleItem.img} alt={singleItem.title} />
+      {selected && <div className={styles.overlay} onClick={setOverlay}></div>}
+      <div className={styles.goBack}>
+        <Link to={'/projects'} className={`${styles.goBackLink} ${lightMode ? styles.goBackLinkLight : styles.goBackLinkDark}`}><FontAwesomeIcon icon={faArrowLeft} /> <span>Go Back</span></Link>
       </div>
-      <div className={styles.projectInfo}>
+      {!selected ? <div className={styles.mainImg}>
+        {singleItem.img.map((image, index) => {
+          return (<img src={image} onClick={() => handleImg(index)} alt={singleItem.title} />)
+        })}
+      </div> :
+        <div className={styles.singleImg}>
+          <button onClick={removeIndex} className={styles.leftBtn}><FontAwesomeIcon icon={faArrowLeft} /></button>
+          <img src={singleItem.img[index]} alt="..." />
+          <button onClick={addIndex} className={styles.rightBtn}><FontAwesomeIcon icon={faArrowRight} /></button>
+        </div>
+      }
+      <div className={`${styles.projectInfo} ${lightMode ? styles.lightProjectInfo : styles.darkProjectInfo}`}>
         <h1>{singleItem.title}</h1>
         <p>{singleItem.description}</p>
         <div className={styles.tech}>
@@ -34,10 +79,20 @@ const SingleProject = () => {
             ))}
           </section>
         </div>
-        <a className={lightMode ? styles.lightGit : styles.darkGit} href={singleItem.git} target="_blank" rel="noopener noreferrer">
-          GitHub Link
+        <a
+          href={singleItem.git}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Github"
+        >
+          <FontAwesomeIcon
+            icon={faGithub}
+            className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
+              }`}
+          />
         </a>
       </div>
+
     </main>
   );
 };

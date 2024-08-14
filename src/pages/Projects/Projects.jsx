@@ -38,7 +38,7 @@ const Projects = () => {
               <span className={`${styles.tag} ${lightMode ? styles.lightTag : styles.darkTag}`}>{project.tech.slice(0, 1)}</span>
               <Link className={styles.imgLink} to={`/projects/${project.id}`}>
                 <img
-                  src={project.img}
+                  src={project.img[0]}
                   alt={project.title}
                   className={lightMode ? styles.lightImage : styles.darkImage}
                 />

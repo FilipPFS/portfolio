@@ -17,7 +17,7 @@ import { useSelector } from "react-redux";
 import HomeValues from "../../components/HomeValues/HomeValues";
 
 const Home = () => {
-  const recentProjects = data.slice(-3);
+  const recentProjects = data.slice(0, 3);
   const lightMode = useSelector((state) => state.theme.isLightMode);
 
   return (
