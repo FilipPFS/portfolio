@@ -2,8 +2,16 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from "./Contact.module.css";
 import { useSelector } from 'react-redux';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export const ContactUs = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const form = useRef();
   const [message, setMessage] = useState("");
 
@@ -32,7 +40,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-aos="zoom-in">
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <h1>Contactez-moi</h1>
         <label htmlFor="user_username">Votre nom</label>

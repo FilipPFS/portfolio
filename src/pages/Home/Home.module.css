@@ -3,10 +3,12 @@
 :root {
     --blue: rgb(162, 192, 252);
     --darkBlue: rgb(38, 38, 171);
-  }
-  
+}
 
-h1, p {
+
+h1,
+p,
+h3 {
     margin: 0;
     padding: 0;
 }
@@ -22,8 +24,8 @@ h1, p {
 .main {
     display: flex;
     flex-direction: column;
-    padding: 0 90px;
     gap: 20px;
+    padding: 0 90px;
 }
 
 .mainContainer {
@@ -39,9 +41,14 @@ h1, p {
 }
 
 @keyframes slideIn {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-  }
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
 
 .infoContainer span {
     font-size: 18px;
@@ -133,11 +140,11 @@ h1, p {
     color: var(--darkBlue);
 }
 
-.darkButton:hover{
+.darkButton:hover {
     background-color: rgb(12, 12, 82);
 }
 
-.lightButton:hover{
+.lightButton:hover {
     background-color: rgb(215, 224, 227);
 }
 
@@ -154,7 +161,7 @@ h1, p {
     .infoJs {
         font-size: 35px;
     }
-    
+
     .infoContainer p {
         margin-top: 10px;
         width: 80%;
@@ -169,7 +176,7 @@ h1, p {
     .infoJs {
         font-size: 28px;
     }
-    
+
     .infoContainer p {
         font-size: 15px;
         width: 90%;
@@ -238,7 +245,7 @@ h1, p {
     .infoJs {
         font-size: 28px;
     }
-    
+
     .infoContainer p {
         font-size: 15px;
     }
@@ -247,4 +254,3 @@ h1, p {
         font-size: 35px;
     }
 }
-

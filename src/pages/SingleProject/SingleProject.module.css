@@ -12,7 +12,7 @@
     left: 0;
     min-width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -109,23 +109,15 @@
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .lightIcon {
-    color: black;
+    color: white;
 }
 
 .darkIcon {
-    color: aqua;
-}
-
-.lightIcon:hover {
-    color: rgb(89, 19, 19);
-}
-
-.darkIcon:hover {
-    color: white;
+    color: rgb(25, 26, 26);
 }
 
 .tech {
@@ -154,8 +146,37 @@
 }
 
 .lightItem {
-    background-color: rgb(157, 157, 163);
+    background-color: rgb(14, 14, 65);
     color: white;
+}
+
+.gitBtns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gitButton {
+    width: 140px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    padding-left: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gitButtonLight {
+    background-color: rgb(33, 33, 135);
+    color: white;
+}
+
+.gitButtonLight:hover {
+    background-color: rgb(9, 9, 99);
 }
 
 @media (max-width: 1024px) {

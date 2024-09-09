@@ -15,8 +15,17 @@ import data from "../../data";
 import { ContactUs } from "../../components/Contact/Contact";
 import { useSelector } from "react-redux";
 import HomeValues from "../../components/HomeValues/HomeValues";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const recentProjects = data.slice(0, 3);
   const lightMode = useSelector((state) => state.theme.isLightMode);
 
@@ -24,14 +33,12 @@ const Home = () => {
     <main className={styles.main}>
       <div className={styles.mainContainer}>
         <div className={styles.infoContainer}>
-          <span>Salut,</span>
-          <h1 className={styles.infoTitle}>Je suis Filip</h1>
           <h1 className={`${lightMode ? styles.light : styles.dark} ${styles.infoTitle}`}>
-            Développeur Web
+            Filip Petrovic
           </h1>
-          <h1 className={`${lightMode ? styles.light : styles.dark} ${styles.infoJs}`}>Java Script</h1>
+          <h3>Développer Full Stack</h3>
           <p>
-            Développeur junior JavaScript passionné avec une solide formation en
+            Bonjour, je suis un Développeur FullStack spécialisé en JavaScript. Passionné et avec une solide formation en
             programmation, j'ai un énorme potentiel pour apprendre rapidement et
             innover. Je suis déterminé à contribuer efficacement et à devenir un
             atout précieux pour toute équipe de développement.
@@ -68,7 +75,7 @@ const Home = () => {
         </div>
       </div>
       <HomeValues />
-      <div className={styles.projects}>
+      <div className={styles.projects} data-aos="fade-right">
         <section className={styles.projectsHead}>
           <h1>Projets récents</h1>
           <Link to="/projects">

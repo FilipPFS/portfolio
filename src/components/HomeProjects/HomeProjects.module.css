@@ -55,7 +55,8 @@ p {
 }
 
 .lightTag {
-    background-color: rgb(193, 205, 215);
+    background-color: rgb(14, 14, 65);
+    color: white;
 }
 
 .darkTag {

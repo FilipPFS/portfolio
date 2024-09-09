@@ -1,17 +1,30 @@
+import computer from "../../images/computer.webp";
+import lightComputer from "../../images/lightComputer.webp";
+import cloud from "../../images/cloud.webp";
+import lightCloud from "../../images/lightCloud.webp";
+import thunder from "../../images/thunder.webp";
+import lightThunder from "../../images/lightThunder.webp";
+
 export default [
   {
-    title: "Apprendre en cotinu",
+    img: computer,
+    darkImg: lightComputer,
+    title: "Développement Front-End",
     description:
-      "Apprendre et développer constamment mes compétences et à rester informé sur les dernières avancées technologiques et des meilleures pratiques de l'industrie.",
+      "Création d'interfaces utilisateur modernes et interactives en utilisant des technologies comme React pour offrir des expériences fluides et réactives sur tous les types d'appareils.",
   },
   {
-    title: "Collaborer efficacement",
+    img: cloud,
+    darkImg: lightCloud,
+    title: "Développement Back-End",
     description:
-      "Travailler en équipe de manière proactive et communicative pour garantir la réussite des projets et l'atteinte des objectifs communs.",
+      "Conception et développement de serveurs robustes et évolutifs avec Node.js, gestion des bases de données et des API pour garantir des applications web performantes.",
   },
   {
-    title: "Fournir des solutions de qualité",
+    img: thunder,
+    darkImg: lightThunder,
+    title: "Optimisation des performances web",
     description:
-      "Assurer que chaque ligne de code est propre, optimisée et bien projets.",
+      "Amélioration des performances des sites web en optimisant le temps de chargement, les ressources et la gestion des requêtes pour une expérience utilisateur rapide et efficace.",
   },
 ];

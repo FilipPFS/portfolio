@@ -79,18 +79,42 @@ const SingleProject = () => {
             ))}
           </section>
         </div>
-        <a
-          href={singleItem.git}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Github"
-        >
-          <FontAwesomeIcon
-            icon={faGithub}
-            className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
-              }`}
-          />
-        </a>
+        <div className={styles.gitBtns}>
+          {singleItem.frontend &&
+            <a
+              href={singleItem.frontend}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+              className={styles.gitLink}
+            >
+              <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
+                    }`}
+                />
+                Frontend
+              </button>
+            </a>}
+          {singleItem.backend &&
+            <a
+              href={singleItem.backend}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+              className={styles.gitLink}
+            >
+              <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
+                    }`}
+                />
+                Backend
+              </button>
+            </a>}
+        </div>
       </div>
 
     </main>

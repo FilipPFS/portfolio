@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 import styles from "./Projects.module.css";
 import { ContactUs } from "../../components/Contact/Contact";
 import { useSelector } from "react-redux";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Projects = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    AOS.init({ duration: 1000 });
   }, []);
 
   const lightMode = useSelector((state) => state.theme.isLightMode);
@@ -20,7 +25,7 @@ const Projects = () => {
   };
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-aos="zoom-in">
       <section className={styles.head}>
         <h1>Projets</h1>
       </section>
