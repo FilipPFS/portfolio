@@ -311,7 +311,7 @@
 @media (max-width: 500px) {
     .main {
         margin-bottom: 40px;
-        padding: 0 40px;
+        padding: 0 30px;
     }
 
     .projectInfo {

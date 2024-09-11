@@ -99,7 +99,7 @@
     .mainSection h2 {
         font-size: 30px;
     }
-    
+
     .mainSection p {
         max-width: 70%;
         font-size: 20px;
@@ -126,7 +126,7 @@
         font-size: 30px;
         width: 20%;
     }
-    
+
     .mainSection p {
         max-width: 75%;
     }
@@ -179,7 +179,7 @@
 
 @media (max-width: 500px) {
     .main {
-        padding: 0 50px;
+        padding: 0 30px;
     }
 
     .mainHead h1 {
@@ -192,6 +192,3 @@
     }
 
 }
-
-
-

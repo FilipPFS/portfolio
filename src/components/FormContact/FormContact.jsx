@@ -2,11 +2,11 @@ import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import styles from "./FormContact.module.css";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const FormContact = () => {
 
     const form = useRef();
-    const [message, setMessage] = useState("");
 
     const lightMode = useSelector
         ((state) => state.theme.isLightMode);
@@ -22,10 +22,7 @@ const FormContact = () => {
                 () => {
                     console.log('SUCCESS!');
                     form.current.reset();
-                    setMessage("Votre message a été correctement envoyé.")
-                    setTimeout(() => {
-                        setMessage("");
-                    }, 5000)
+                    toast.success("Le message a été envoyé.")
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
