@@ -1,90 +1,131 @@
-input, textarea {
-    padding: 10px;
-    font-family: Outfit;
-    font-size: 20px;
-}
-
-.darkInput {
-    color: white;
-    border: 2px solid var(--blue);
-}
-
-.lightInput {
-    color: black; 
-    border: 2px solid black;
-}
-
 .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 20px;
+    margin: 140px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.lightContainer {
+    background-color: rgb(207, 249, 249);
+}
+
+.darkContainer {
+    background-color: rgb(17, 9, 58);
+}
+
+.firstChild {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.secondChild {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title {
+    position: relative;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    border: 2px solid blue;
+    width: 20%;
+    left: 0;
+    bottom: -5px;
+}
+
+.contactInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.infoContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.iconContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 120px 0px;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
 }
 
-.form {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 600px;
+.lightIconContainer {
+    background-color: blue;
 }
 
-.form h1 {
-    align-self: center;
+.darkIconContainer {
+    background-color: rgb(216, 209, 209);
 }
 
-.form input, .form textarea {
-    background-color: transparent;
-    border-radius: 10px;
-    box-shadow: rgba(148, 201, 219, 0.24) 0px 3px 8px;
+.icon {
+    font-size: 16px;
 }
 
-.form textarea {
-    height: 200px;
-}
-
-.button {
-    cursor: pointer;
-}
-
-.lightButton {
-    color: black;
-    border: 2px solid black;
-}
-
-.darkButton {
+.lightIcon {
     color: white;
-    border: 2px solid var(--blue);
 }
 
-.darkButton:hover {
-    background-color: rgb(15, 15, 56);
+.darkIcon {
+    color: black;
 }
 
-.darkButton:active {
-    background-color: rgb(5, 5, 56);
-}
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-.lightButton:hover {
-    background-color: rgb(230, 234, 237);
-}
+    .firstChild {
+        width: 100%;
+    }
 
-.lightButton:active {
-    background-color: rgb(213, 220, 227);
-}
-
-.container p {
-    margin-top: 20px;
-}
-
-@media (max-width: 800px) {
-    .form {
-        width: 80%;
+    .secondChild {
+        width: 100%;
     }
 }
 
-@media (max-width: 500px) {
-    .form {
-        width: 100%;
+@media (max-width: 600px) {
+
+    .container {
+        padding: 30px 30px;
+        border-radius: 10px;
+    }
+
+    .container h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .iconContainer {
+        padding: 6px;
+    }
+
+    .icon {
+        font-size: 12px;
+    }
+
+    .info {
+        font-size: 12px;
     }
 }

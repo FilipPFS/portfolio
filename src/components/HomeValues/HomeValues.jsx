@@ -24,7 +24,7 @@ const HomeValues = () => {
             <div className={styles.values}>
                 {values.map((item) => {
                     return (
-                        <section className={`${styles.value} ${lightMode ? styles.ligthValue : styles.darkValue}`}>
+                        <section key={item.description} className={`${styles.value} ${lightMode ? styles.ligthValue : styles.darkValue}`}>
                             <div className={styles.imageContainer}>
                                 <img src={lightMode ? item.img : item.darkImg} alt={item.title} className={styles.image} />
                             </div>

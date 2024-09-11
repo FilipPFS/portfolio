@@ -1,0 +1,54 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form input,
+.form textarea {
+    background-color: rgb(252, 250, 248);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    font-family: 'Lexend';
+}
+
+.inputFields {
+    display: flex;
+    width: 100%;
+    justify-content: space-between
+}
+
+.inputFields input {
+    width: 48%;
+}
+
+.form textarea {
+    height: 120px;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 5px 20px;
+    font-family: 'Lexend';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .inputFields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inputFields input {
+        width: 100%;
+    }
+}

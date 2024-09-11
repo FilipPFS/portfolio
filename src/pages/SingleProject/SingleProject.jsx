@@ -70,7 +70,7 @@ const SingleProject = () => {
         <h1>{singleItem.title}</h1>
         <p>{singleItem.description}</p>
         <div className={styles.tech}>
-          Technologies utilisés
+          <h3 className={`${styles.subTitle} ${lightMode ? styles.ligthSubTitle : styles.darkSubTitle}`}>Technologies utilisés</h3>
           <section className={styles.items}>
             {singleItem.tech.map((item, index) => (
               <span key={index} className={`${styles.item} ${lightMode ? styles.lightItem : styles.darkItem}`}>
@@ -79,41 +79,44 @@ const SingleProject = () => {
             ))}
           </section>
         </div>
-        <div className={styles.gitBtns}>
-          {singleItem.frontend &&
-            <a
-              href={singleItem.frontend}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Github"
-              className={styles.gitLink}
-            >
-              <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
-                    }`}
-                />
-                Frontend
-              </button>
-            </a>}
-          {singleItem.backend &&
-            <a
-              href={singleItem.backend}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Github"
-              className={styles.gitLink}
-            >
-              <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
-                    }`}
-                />
-                Backend
-              </button>
-            </a>}
+        <div className={styles.gitContainer}>
+          <h3 className={`${styles.subTitle} ${lightMode ? styles.ligthSubTitle : styles.darkSubTitle}`}>Liens Github</h3>
+          <section className={styles.gitBtns}>
+            {singleItem.frontend &&
+              <a
+                href={singleItem.frontend}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github"
+                className={styles.gitLink}
+              >
+                <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
+                      }`}
+                  />
+                  Frontend
+                </button>
+              </a>}
+            {singleItem.backend &&
+              <a
+                href={singleItem.backend}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github"
+                className={styles.gitLink}
+              >
+                <button className={`${styles.gitButton} ${lightMode ? styles.gitButtonLight : styles.gitButtonRight}`}>
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon
+                      }`}
+                  />
+                  Backend
+                </button>
+              </a>}
+          </section>
         </div>
       </div>
 

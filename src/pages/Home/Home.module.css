@@ -254,3 +254,9 @@ h3 {
         font-size: 35px;
     }
 }
+
+@media (max-width: 500px) {
+    .main {
+        padding: 0 30px;
+    }
+}

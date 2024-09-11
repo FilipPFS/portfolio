@@ -137,17 +137,25 @@
     font-weight: 600;
     width: 150px;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
 }
 
 .darkItem {
-    background-color: rgb(4, 4, 28);
+    background-color: rgb(6, 6, 116);
+    color: white;
 }
 
 .lightItem {
     background-color: rgb(14, 14, 65);
     color: white;
+}
+
+.gitContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .gitBtns {
@@ -198,11 +206,6 @@
         gap: 30px;
     }
 
-    .projectInfo a {
-        width: 200px;
-        font-size: 20px;
-    }
-
     .projectInfo h1 {
         font-size: 50px;
     }
@@ -223,6 +226,29 @@
 }
 
 @media (max-width: 800px) {
+
+    .subTitle {
+        font-size: 16px;
+        position: relative;
+        width: fit-content;
+    }
+
+    .subTitle:after {
+        content: "";
+        position: absolute;
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+    }
+
+    .ligthSubTitle:after {
+        border: 1.5px solid black;
+    }
+
+    .darkSubTitle:after {
+        border: 1.5px solid white;
+    }
 
     .main {
         gap: 25px;
@@ -249,7 +275,9 @@
     }
 
     .tech {
-        font-size: 17px;
+        align-items: center;
+        font-size: 15px;
+        gap: 20px;
     }
 
     .items {
@@ -257,9 +285,25 @@
         justify-content: center;
     }
 
-    .projectInfo a {
-        font-size: 17px;
-        margin-bottom: 50px;
+    .gitContainer {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gitBtns {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 60%;
+    }
+
+    .gitLink {
+        width: 70%;
+    }
+
+    .gitButton {
+        width: 100%;
+        margin: 0;
     }
 
 }
@@ -270,6 +314,10 @@
         padding: 0 40px;
     }
 
+    .projectInfo {
+        padding: 10px;
+    }
+
     .singleImg img {
         width: 95%;
     }
@@ -278,7 +326,27 @@
         font-size: 30px;
     }
 
-    .projectInfo a {
-        font-size: 12px;
+    .projectInfo p {
+        font-size: 13px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+
+    .gitBtns {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 60%;
+    }
+
+    .gitLink {
+        width: 100%;
+    }
+
+    .gitButton {
+        width: 100%;
+        margin: 0;
     }
 }

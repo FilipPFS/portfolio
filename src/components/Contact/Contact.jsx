@@ -5,6 +5,9 @@ import { useSelector } from 'react-redux';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import FormContact from '../FormContact/FormContact';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export const ContactUs = () => {
 
@@ -12,67 +15,41 @@ export const ContactUs = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const form = useRef();
-  const [message, setMessage] = useState("");
-
-  const lightMode = useSelector((state) => state.theme.isLightMode);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_1td9lo8', 'template_s0r4rjr', form.current, {
-        publicKey: 'qIWAUkvjjGOLl2GBF',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          form.current.reset();
-          setMessage("Votre message a été correctement envoyé.")
-          setTimeout(() => {
-            setMessage("");
-          }, 5000)
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+  const lightMode = useSelector
+    ((state) => state.theme.isLightMode);
 
   return (
-    <div className={styles.container} data-aos="zoom-in">
-      <form ref={form} onSubmit={sendEmail} className={styles.form}>
+    <div className={`${styles.container} ${lightMode ? styles.lightContainer : styles.darkContainer}`} data-aos="zoom-in">
+      <div className={styles.firstChild}>
+        <h1 className={styles.title}>Mes informations</h1>
+        <p>
+          Vous trouverez ici mes informations de contact ainsi que mon adresse. Vous pouvez également utiliser directement le formulaire à côté.
+        </p>
+        <section className={styles.contactInfos}>
+          <div className={styles.infoContainer}>
+            <span className={`${styles.iconContainer} ${lightMode ? styles.lightIconContainer : styles.darkIconContainer}`}>
+              <FontAwesomeIcon icon={faLocation} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
+            </span>
+            <span className={styles.info}>Montmagny 95360</span>
+          </div>
+          <div className={styles.infoContainer}>
+            <span className={`${styles.iconContainer} ${lightMode ? styles.lightIconContainer : styles.darkIconContainer}`}>
+              <FontAwesomeIcon icon={faEnvelope} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
+            </span>
+            <span className={styles.info}>filippetrovicfr04@gmail.com</span>
+          </div>
+          <div className={styles.infoContainer}>
+            <span className={`${styles.iconContainer} ${lightMode ? styles.lightIconContainer : styles.darkIconContainer}`}>
+              <FontAwesomeIcon icon={faPhone} className={`${styles.icon} ${lightMode ? styles.lightIcon : styles.darkIcon}`} />
+            </span>
+            <span className={styles.info}>07 68 45 00 84</span>
+          </div>
+        </section>
+      </div>
+      <div className={styles.secondChild}>
         <h1>Contactez-moi</h1>
-        <label htmlFor="user_username">Votre nom</label>
-        <input
-          type="text"
-          id="user_username"
-          name="user_username"
-          required
-          className={lightMode ? styles.lightInput : styles.darkInput}
-        />
-        <label htmlFor="user_email">Email</label>
-        <input
-          type="email"
-          id="user_email"
-          name="user_email"
-          required
-          className={lightMode ? styles.lightInput : styles.darkInput}
-        />
-        <label htmlFor="message">Votre message</label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          className={lightMode ? styles.lightInput : styles.darkInput}
-        />
-        <input
-          type="submit"
-          value="Envoyer"
-          className={`${styles.button} ${lightMode ? styles.lightButton : styles.darkButton}`}
-        />
-      </form>
-      {message && <p>{message}</p>}
+        <FormContact />
+      </div>
     </div>
 
   );
