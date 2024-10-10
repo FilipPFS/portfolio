@@ -23,93 +23,16 @@ h2 {
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 40px;
+    display: grid;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 }
 
-.singleProject {
-    width: 30%;
-    /* padding: 20px; */
-    border-radius: 10px;
-    position: relative;
-}
-
-.lightSingleProject {
-    background-color: rgb(243, 238, 238);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.darkSingleProject {
-    background-color: rgb(24, 24, 46);
-}
-
-.tag {
-    position: absolute;
-    font-size: 12px;
-    border-radius: 15px;
-    padding: 5px 20px;
-    left: 15px;
-    top: 15px;
-}
-
-.lightTag {
-    background-color: rgb(40, 33, 33);
-    color: white;
-}
-
-.darkTag {
-    background-color: rgb(16, 16, 50);
-    color: white;
-}
-
-.singleProject img {
-    z-index: 1;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.lightTitle {
-    color: black;
-}
-
-.descBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.lightLink {
-    color: black;
-    text-decoration: underline;
-}
-
-.darkLink {
-    text-decoration: underline;
-}
-
-.infos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-    padding: 10px 20px;
-}
-
-.infos h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
 
 @media (max-width: 1024px) {
     .projects {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     }
 
     .singleProject {
@@ -127,13 +50,9 @@ h2 {
     }
 }
 
-@media (max-width: 800px) {
-    .imgLink {
-        width: 100%;
-    }
-
-    .singleProject img {
-        height: auto;
+@media (max-width: 750px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 }
 

@@ -21,7 +21,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${lightMode ? styles.lightHeader : styles.darkHeader}`}>
       <div className={styles.logoContainer}>
         <Link to="/">
           <img src={lightMode ? darkLogo : logoFp} alt="logo" />

@@ -24,7 +24,7 @@ p {
 .container img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    box-shadow: rgba(108, 201, 238, 0.02) 0px 1px 3px 0px, rgba(234, 238, 243, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     width: 100%;
     object-fit: cover;
 }

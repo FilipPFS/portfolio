@@ -6,6 +6,7 @@ import { ContactUs } from "../../components/Contact/Contact";
 import { useSelector } from "react-redux";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SingleProject from "../../components/SingleProject/SingleProject";
 
 
 const Projects = () => {
@@ -15,8 +16,6 @@ const Projects = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const lightMode = useSelector((state) => state.theme.isLightMode);
-
   const truncateText = (text, maxLength) => {
     if (text.length <= maxLength) {
       return text;
@@ -25,48 +24,17 @@ const Projects = () => {
   };
 
   return (
-    <main className={styles.main} data-aos="zoom-in">
+    <main className={styles.main}>
       <section className={styles.head}>
         <h1>Projets</h1>
       </section>
 
-      <section className={styles.projects}>
+      <section className={styles.projects} data-aos="fade-right">
         {data.map((project) => {
           const description = truncateText(project.description, 92);
 
           return (
-            <div
-              key={project.id}
-              className={`${styles.singleProject} ${lightMode ? styles.lightSingleProject : styles.darkSingleProject
-                }`}
-            >
-              <span className={`${styles.tag} ${lightMode ? styles.lightTag : styles.darkTag}`}>{project.tech.slice(0, 1)}</span>
-              <Link className={styles.imgLink} to={`/projects/${project.id}`}>
-                <img
-                  src={project.img[0]}
-                  alt={project.title}
-                  className={lightMode ? styles.lightImage : styles.darkImage}
-                />
-              </Link>
-              <div className={styles.infos}>
-                <Link to={`/projects/${project.id}`}>
-                  <h2
-                    className={lightMode ? styles.lightTitle : styles.darkTitle}
-                  >
-                    {project.title}
-                  </h2>
-                </Link>
-                <div className={styles.descBlock}>
-                  <p>{description}</p>
-                  <Link
-                    className={lightMode ? styles.lightLink : styles.darkLink}
-                    to={`/projects/${project.id}`}
-                  >
-                    Lire la suite
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <SingleProject project={project} description={description} />
           );
         })}
       </section>

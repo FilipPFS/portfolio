@@ -8,8 +8,50 @@ import p4 from "./images/p4_salouen.webp";
 import s4 from "./images/s4_salouen.webp";
 import p5 from "./images/p5_christianweb.webp";
 import s5 from "./images/s5_christianweb.webp";
+import p6 from "./images/p6_trouverlouer.webp";
+import s6 from "./images/s6_trouverlouer.webp";
+import p7 from "./images/p7_fpcast.webp";
+import s7 from "./images/s7_fpcast.webp";
+import p8 from "./images/p8_chassedevs.webp";
+import s8 from "./images/s8_chassedevs.webp";
 
 export default [
+  {
+    id: 8,
+    title: "Chasse au Devs",
+    description:
+      "Chasse au Devs est une application Full Stack créée avec Next.js et TypeScript. Il s'agit d'une plateforme de recherche d'emploi dans le domaine du développement web. Les candidats peuvent compléter leur profile et postuler aux différents offres présentes, directement sur la plateforme. Les recruteurs peuvent publier des annonces d'emploi, gérer leurs annonces, gérer les candidatures reçus.",
+    tech: ["Next.js", "TypeScript", "MongoDB", "Cloudinary"],
+    img: [p8, s8],
+    link: "https://chasse-au-devs.vercel.app/",
+    frontend: "https://github.com/FilipPFS/chasse-au-devs",
+  },
+  {
+    id: 7,
+    title: "FP-Cast",
+    description:
+      "FP-Cast est une application Full Stack crée avec Next.js. Les utilisateurs peuvent écouter les podcasts sur cette plateforme mais ils ont aussi la possibilité de créer leur propre podcast, et tout ca grâce à l'IA. Ils peuvent choisir un titre, une description, et le contenu du podcast va être génerer avec une voix de l'IA à partir du texte qu'ils ont écrit. Ils peuvent aussi ajouter une image comme cover pour leur podcast, ou en demander l'IA de leur générer une.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Convex",
+      "Clerk Auth",
+      "OpenAI",
+    ],
+    img: [p7, s7],
+    link: "https://fp-cast.vercel.app/",
+    frontend: "https://github.com/FilipPFS/fp-cast.git",
+  },
+  {
+    id: 6,
+    title: "Trouver-Louer",
+    description:
+      "Trouver Louer est une application Full Stack créée avec Next.js. Les utilisateurs peuvent se connecter via Google. Ils ont ensuite la possibilité de voir toutes les locations disponibles, de rechercher des locations grâce à une barre de recherche et aux différentes catégories. De plus, ils peuvent ajouter leur propre location ainsi que 4 images pour chacune. Un système de messagerie est également présent sur l'application, permettant à l'utilisateur de contacter directement le propriétaire de la location.",
+    tech: ["Next.js", "Tailwind", "MongoDB"],
+    img: [p6, s6],
+    frontend: "https://github.com/FilipPFS/trouver-louer",
+  },
   {
     id: 5,
     title: "ChristianWeb",
@@ -37,6 +79,7 @@ export default [
       "Le portfolio personnel qui répresente mon parcours en tant qu'un développeur Web. Le projet a été crée avec React et vous pouvez regarder entièrement le code disponible sur Github.",
     tech: ["React", "Redux Toolkit"],
     img: [p1, s1],
+    link: "https://filip-petrovic.com/",
     frontend: "https://github.com/FilipPFS/portfolio.git",
     backend: "",
   },

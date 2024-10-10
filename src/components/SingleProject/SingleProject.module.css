@@ -1,0 +1,178 @@
+.singleProject {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.lightSingleProject {
+    background-color: rgb(243, 238, 238);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.lightSingleProject:hover {
+    background-color: rgb(238, 233, 233);
+}
+
+.darkSingleProject {
+    background-color: rgb(24, 24, 46);
+    border: 1px solid rgba(4, 232, 232, 0.1);
+}
+
+.darkSingleProject:hover {
+    background-color: rgb(19, 19, 41);
+}
+
+.tag {
+    position: absolute;
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 5px 20px;
+    left: 15px;
+    top: 15px;
+}
+
+.lightTag {
+    background-color: rgb(33, 11, 86);
+    border: 1px solid rgba(4, 232, 232, 0.3);
+    color: white;
+}
+
+.darkTag {
+    background-color: rgb(213, 222, 222);
+    color: black;
+    font-weight: 700;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.singleProject img {
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.lightTitle {
+    color: black;
+}
+
+.lightLink {
+    color: black;
+    text-decoration: underline;
+}
+
+.darkLink {
+    text-decoration: underline;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.infos h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.detailButton {
+    padding: 8px 14px;
+    cursor: pointer;
+    width: 50%;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+
+.lightDetailButton {
+    background-color: blue;
+    color: white;
+}
+
+.darkDetailButton {
+    background-color: rgb(216, 228, 228);
+    color: black;
+}
+
+.darkDetailButton:hover {
+    background-color: rgb(186, 206, 206);
+}
+
+.lightDetailButton:hover {
+    background-color: rgb(23, 23, 126);
+}
+
+.darkDetailButton:active {
+    background-color: rgb(172, 197, 197);
+}
+
+.lightDetailButton:active {
+    background-color: rgb(15, 15, 73);
+}
+
+.liveLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-weight: 550;
+    position: relative;
+}
+
+.lightLiveLink {
+    color: blue;
+}
+
+.liveLink:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 28px;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lightLiveLink:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: blue;
+}
+
+.darkLiveLink {
+    color: azure;
+}
+
+.darkLiveLink:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: azure;
+}
+
+@media (max-width: 750px) {
+    .buttons {
+        margin-top: 10px;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .detailButton {
+        width: 100%;
+    }
+}
