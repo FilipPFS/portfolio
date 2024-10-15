@@ -14,8 +14,28 @@ import p7 from "./images/p7_fpcast.webp";
 import s7 from "./images/s7_fpcast.webp";
 import p8 from "./images/p8_chassedevs.webp";
 import s8 from "./images/s8_chassedevs.webp";
+import p9 from "./images/p9_evently.webp";
+import s9 from "./images/s9_evently.webp";
 
 export default [
+  {
+    id: 9,
+    title: "Evently",
+    description:
+      "Evently est une application Full Stack créée avec Next.js. Sur cette plateforme les utilisateurs peuvent explorer les évènements disponibles et peuvent obtenir des tickets gratuits ou payants. De plus les utilisateurs ont la possibilité de créer leur propre évènement personnalisé, ajouter un titre, une description, une image, un lien, le prix si c’est un évènement payant etc.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Tailwind",
+      "Shadcn",
+      "Stripe.js",
+      "UploadThing",
+    ],
+    img: [p9, s9],
+    link: "https://evently-omega.vercel.app",
+    frontend: "https://github.com/FilipPFS/evently.git",
+  },
   {
     id: 8,
     title: "Chasse au Devs",
