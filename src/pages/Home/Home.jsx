@@ -18,6 +18,7 @@ import HomeValues from "../../components/HomeValues/HomeValues";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import InfoModal from "../../components/InfoModal/InfoModal";
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
+      <InfoModal />
       <div className={styles.mainContainer}>
         <div className={styles.infoContainer}>
           <h1 className={`${lightMode ? styles.light : styles.dark} ${styles.infoTitle}`}>
